@@ -2,6 +2,8 @@
 
 Nothing more, nothing less.
 
+---
+
 MIT License
 
 Copyright (c) 2023 István Juhos
