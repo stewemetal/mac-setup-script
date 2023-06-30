@@ -1,6 +1,8 @@
 # A bash script that helps setting up a new Mac
 
-Nothing more, nothing less.
+If you download and run `mac-setup.sh`, it takes care of 
+- installing and setting up Homebrew,
+- installing apps with Homebrew that are in the list `casks` and `packages` in the script
 
 ---
 
