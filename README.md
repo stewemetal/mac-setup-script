@@ -2,7 +2,7 @@
 
 If you download and run `mac-setup.sh`, it takes care of 
 - installing and setting up Homebrew,
-- installing apps with Homebrew that are in the list `casks` and `packages` in the script
+- installing apps with Homebrew that are in the lists `casks` and `packages` in the script
 
 ---
 
