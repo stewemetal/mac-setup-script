@@ -16,6 +16,7 @@ declare -a casks=(
     "vlc"
     "typora"
     "bartender"
+    "contexts"
     "gimp"
     "messenger"
     "slack"
