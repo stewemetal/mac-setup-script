@@ -26,6 +26,7 @@ declare -a casks=(
     "dropbox"
     "google-drive"
     "jetbrains-toolbox"
+    "visual-studio-code"
 )
 
 declare -a packages=(
