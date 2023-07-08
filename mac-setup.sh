@@ -25,6 +25,7 @@ declare -a casks=(
     "marta"
     "dropbox"
     "google-drive"
+    "jetbrains-toolbox"
 )
 
 declare -a packages=(
