@@ -22,12 +22,15 @@ declare -a casks=(
     "slack"
     "skype"
     "zoom"
+    "marta"
+    "dropbox"
+    "google-drive"
 )
 
 declare -a packages=(
-	"git"
-	"zsh" 
-	"zsh-completions"
+    "git"
+    "zsh" 
+    "zsh-completions"
 )
 
 for i in "${casks[@]}"
