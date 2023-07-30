@@ -1,5 +1,7 @@
 #! /bin/bash
 
+JDK_VERSION="17"
+
 echo "Installing Homebrew"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
@@ -32,7 +34,7 @@ declare -a casks=(
 )
 
 declare -a packages=(
-    "openjdk"
+    "openjdk@$JDK_VERSION"
     "git"
     "zsh" 
     "zsh-completions"
@@ -49,4 +51,10 @@ do
    echo "Installing $i..."
    brew install $i
 done
+
+echo "Setting up JDK"
+sudo ln -sfn /opt/homebrew/opt/openjdk@$JDK_VERSION/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-$JDK_VERSION.jdk
+echo 'export PATH="/opt/homebrew/opt/openjdk@$JDK_VERSION/bin:$PATH"' >> ~/.zshrc
+export CPPFLAGS="-I/opt/homebrew/opt/openjdk@$JDK_VERSION/include"
+echo "JDK configured"
 
