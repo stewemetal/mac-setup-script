@@ -32,6 +32,7 @@ declare -a casks=(
 )
 
 declare -a packages=(
+    "openjdk"
     "git"
     "zsh" 
     "zsh-completions"
