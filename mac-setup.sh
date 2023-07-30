@@ -28,6 +28,7 @@ declare -a casks=(
     "jetbrains-toolbox"
     "visual-studio-code"
     "hugo"
+    "spotify"
 )
 
 declare -a packages=(
