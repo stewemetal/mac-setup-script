@@ -58,3 +58,6 @@ echo 'export PATH="/opt/homebrew/opt/openjdk@$JDK_VERSION/bin:$PATH"' >> ~/.zshr
 export CPPFLAGS="-I/opt/homebrew/opt/openjdk@$JDK_VERSION/include"
 echo "JDK configured"
 
+echo "Disabling automatic Space rearrangement"
+defaults write com.apple.dock "mru-spaces" -bool "false" && killall Dock
+echo "Done"
