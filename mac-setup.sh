@@ -31,6 +31,7 @@ declare -a casks=(
     "visual-studio-code"
     "hugo"
     "spotify"
+    "plex"
 )
 
 declare -a packages=(
