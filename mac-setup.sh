@@ -32,6 +32,7 @@ declare -a casks=(
     "hugo"
     "spotify"
     "plex"
+    "rectangle"
 )
 
 declare -a packages=(
