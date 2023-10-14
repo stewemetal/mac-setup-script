@@ -78,6 +78,7 @@ done
 
 echo "Setting up JDK"
 sudo ln -sfn /opt/homebrew/opt/openjdk@$JDK_VERSION/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-$JDK_VERSION.jdk
+sudo chmod 777 ~/.zshrc
 echo 'export PATH="/opt/homebrew/opt/openjdk@$JDK_VERSION/bin:$PATH"' >> ~/.zshrc
 export CPPFLAGS="-I/opt/homebrew/opt/openjdk@$JDK_VERSION/include"
 echo "JDK configured"
