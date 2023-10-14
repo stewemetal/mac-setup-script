@@ -8,8 +8,11 @@ If you download and run `mac-setup.sh`, it takes care of
 
 ## Usage
 
-- For every part of the script to work, make sure to add the termial app you'll be running `mac-setup.sh` from to the Accessibility list (System Settings -> Privacy & Security -> Accessibility).
-- Clone the repo and run `mac-setup.sh` from the terminal app you added to the Accesibility list in the previous step.
+- For every part of the script to work, make sure to add the termial app you'll be running `mac-setup.sh` from to the Accessibility list (System Settings -> Privacy & Security -> Accessibility). For a new Mac, this will probably be the built-in Terminal.
+- Clone the repo to a folder of your choice.
+- Navigate to the cloned repo directory in the terminal.
+- Run `sudo chown 777 mac-setup.sh`.
+- Run `./mac-setup.sh`
 - Address any interaction that might be needed during the script execution.
 - Profit.
 
