@@ -33,6 +33,7 @@ declare -a casks=(
     "spotify"
     "plex"
     "rectangle"
+    "logi-options-plus"
 )
 
 declare -a packages=(
