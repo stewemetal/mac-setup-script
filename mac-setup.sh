@@ -34,6 +34,7 @@ declare -a casks=(
     "plex"
     "rectangle"
     "logi-options-plus"
+    "xcodes"
 )
 
 declare -a packages=(
