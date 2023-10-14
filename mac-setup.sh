@@ -45,6 +45,16 @@ declare -a packages=(
     "mas"
 )
 
+declare -a appStoreApps=(
+    "Microsoft PowerPoint"
+    "Microsoft Word"
+    "Microsoft Excel"
+    "Keynote"
+    "Bitwarden"
+    "Slack for Desktop"
+    "ColorSlurp"
+)
+
 for i in "${casks[@]}"
 do
    echo "Installing $i..."
@@ -57,6 +67,12 @@ do
    brew install $i
 done
 
+for i in "${appStoreApps[@]}"
+do
+   echo "Installing $i from the AppStore..."
+   mas install "$i"
+done
+
 echo "Setting up JDK"
 sudo ln -sfn /opt/homebrew/opt/openjdk@$JDK_VERSION/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-$JDK_VERSION.jdk
 echo 'export PATH="/opt/homebrew/opt/openjdk@$JDK_VERSION/bin:$PATH"' >> ~/.zshrc
@@ -66,3 +82,4 @@ echo "JDK configured"
 echo "Disabling automatic Space rearrangement"
 defaults write com.apple.dock "mru-spaces" -bool "false" && killall Dock
 echo "Done"
+
