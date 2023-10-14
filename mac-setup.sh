@@ -41,6 +41,7 @@ declare -a packages=(
     "git"
     "zsh" 
     "zsh-completions"
+    "mas"
 )
 
 for i in "${casks[@]}"
