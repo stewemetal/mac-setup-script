@@ -73,7 +73,7 @@ done
 for i in "${appStoreApps[@]}"
 do
    echo "Installing $i from the AppStore..."
-   mas install "$i"
+   mas lucky "$i"
 done
 
 echo "Setting up JDK"
