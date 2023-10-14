@@ -1,6 +1,7 @@
 #! /bin/bash
 
 JDK_VERSION="17"
+DEFAULT_BROWSER="chrome"
 
 echo "Installing Homebrew"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -44,6 +45,7 @@ declare -a packages=(
     "zsh" 
     "zsh-completions"
     "mas"
+    "defaultbrowser"
 )
 
 declare -a appStoreApps=(
@@ -84,3 +86,6 @@ echo "Disabling automatic Space rearrangement"
 defaults write com.apple.dock "mru-spaces" -bool "false" && killall Dock
 echo "Done"
 
+echo "Setting default browser to $DEFAULT_BROWSER"
+osascript set-default-browser.scpt $DEFAULT_BROWSER
+echo "Done"
