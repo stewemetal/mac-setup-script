@@ -35,6 +35,7 @@ declare -a casks=(
     "rectangle"
     "logi-options-plus"
     "xcodes"
+    "menumeters"
 )
 
 declare -a packages=(
