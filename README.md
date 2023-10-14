@@ -12,7 +12,7 @@ If you download and run `mac-setup.sh`, it takes care of
 - Clone the repo to a folder of your choice.
 - Navigate to the cloned repo directory in the terminal.
 - Run `sudo chown 777 mac-setup.sh`.
-- Run `./mac-setup.sh`
+- Run `./mac-setup.sh`.
 - Address any interaction that might be needed during the script execution.
 - Profit.
 
