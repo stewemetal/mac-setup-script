@@ -3,6 +3,15 @@
 If you download and run `mac-setup.sh`, it takes care of 
 - installing and setting up Homebrew,
 - installing apps with Homebrew that are in the lists `casks` and `packages` in the script
+- installing apps from the AppStore that are in the `appStoreApps` list in the script
+- setting the default browser to the one specified as `DEFAULT_BROWSER` in the script
+
+## Usage
+
+- For every part of the script to work, make sure to add the termial app you'll be running `mac-setup.sh` from to the Accessibility list (System Settings -> Privacy & Security -> Accessibility).
+- Clone the repo and run `mac-setup.sh` from the terminal app you added to the Accesibility list in the previous step.
+- Address any interaction that might be needed during the script execution.
+- Profit.
 
 ---
 
