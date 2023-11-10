@@ -10,6 +10,11 @@ echo "Configuring Homebrew"
 (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> "${HOME}/.zprofile"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+declare -a jdks=(
+    "11"
+    "17"
+)
+
 declare -a casks=(
     "google-chrome"
     "sublime-text"
@@ -76,12 +81,17 @@ do
    mas lucky "$i"
 done
 
-echo "Setting up JDK"
-sudo ln -sfn /opt/homebrew/opt/openjdk@$JDK_VERSION/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-$JDK_VERSION.jdk
 sudo chmod 777 ~/.zshrc
-echo 'export PATH="/opt/homebrew/opt/openjdk@$JDK_VERSION/bin:$PATH"' >> ~/.zshrc
-export CPPFLAGS="-I/opt/homebrew/opt/openjdk@$JDK_VERSION/include"
-echo "JDK configured"
+for i in "${jdks[@]}"
+do
+   echo "Setting up JDK $i"
+   sudo ln -sfn "/opt/homebrew/opt/openjdk@$i/libexec/openjdk.jdk" "/Library/Java/JavaVirtualMachines/openjdk-$i.jdk"
+   echo "alias j$X=\"export JAVA_HOME=\`/usr/libexec/java_home -v $X\`; java -version\"" >> ~/.zshrc
+   echo "JDK $i configured"
+done
+source ~/.zshrc
+
+echo "Remember to run j$JDK_VERSION to set default JDK!"
 
 echo "Disabling automatic Space rearrangement"
 defaults write com.apple.dock "mru-spaces" -bool "false" && killall Dock
