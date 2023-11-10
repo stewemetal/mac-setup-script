@@ -82,6 +82,11 @@ do
 done
 
 sudo chmod 777 ~/.zshrc
+
+echo "Setting up Android SDK paths eagerly"
+echo "export ANDROID_HOME=/Users/$USER/Library/Android/sdk" >> ~/.zshrc
+echo 'export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"' >> ~/.zshrc
+
 for i in "${jdks[@]}"
 do
    echo "Setting up JDK $i"
