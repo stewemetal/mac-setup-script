@@ -49,6 +49,7 @@ declare -a packages=(
     "git"
     "zsh" 
     "zsh-completions"
+    "coreutils"
     "mas"
     "defaultbrowser"
 )
