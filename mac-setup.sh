@@ -93,12 +93,14 @@ for i in "${jdks[@]}"
 do
    echo "Setting up JDK $i"
    sudo ln -sfn "/opt/homebrew/opt/openjdk@$i/libexec/openjdk.jdk" "/Library/Java/JavaVirtualMachines/openjdk-$i.jdk"
-   echo "alias j$X=\"export JAVA_HOME=\`/usr/libexec/java_home -v $X\`; java -version\"" >> ~/.zshrc
+   echo "alias j$i=\"export JAVA_HOME=\`/usr/libexec/java_home -v $i\`; java -version\"" >> ~/.zshrc
    echo "JDK $i configured"
 done
 source ~/.zshrc
 
-echo "Remember to run j$JDK_VERSION to set default JDK!"
+echo "Setting active JDK version to $JDK_VERSION"
+eval "j$JDK_VERSION"
+echo "Active JDK version is set to $JDK_VERSION"
 
 echo "Disabling automatic Space rearrangement"
 defaults write com.apple.dock "mru-spaces" -bool "false" && killall Dock
