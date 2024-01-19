@@ -50,6 +50,7 @@ declare -a packages=(
     "zsh" 
     "zsh-completions"
     "coreutils"
+    "kotlin"
     "mas"
     "defaultbrowser"
 )
