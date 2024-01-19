@@ -63,6 +63,7 @@ declare -a appStoreApps=(
     "Bitwarden"
     "Slack for Desktop"
     "ColorSlurp"
+    "CopyLess 2 - Clipboard Manager"
 )
 
 for i in "${casks[@]}"
