@@ -13,6 +13,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 declare -a jdks=(
     "11"
     "17"
+    "21"
 )
 
 declare -a casks=(
@@ -45,7 +46,6 @@ declare -a casks=(
 )
 
 declare -a packages=(
-    "openjdk@$JDK_VERSION"
     "git"
     "zsh" 
     "zsh-completions"
@@ -92,10 +92,12 @@ echo 'export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"' >> ~
 
 for i in "${jdks[@]}"
 do
-   echo "Setting up JDK $i"
+   echo "Installing JDK $i..."
+   brew install "openjdk@$i"
+   echo "Setting up JDK $i..."
    sudo ln -sfn "/opt/homebrew/opt/openjdk@$i/libexec/openjdk.jdk" "/Library/Java/JavaVirtualMachines/openjdk-$i.jdk"
    echo "alias j$i=\"export JAVA_HOME=\`/usr/libexec/java_home -v $i\`; java -version\"" >> ~/.zshrc
-   echo "JDK $i configured"
+   echo "JDK $i installed and configured"
 done
 source ~/.zshrc
 
