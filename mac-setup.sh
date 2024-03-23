@@ -95,6 +95,7 @@ do
    echo "Installing JDK $i..."
    brew install "openjdk@$i"
    echo "Setting up JDK $i..."
+   echo "export PATH=\"/opt/homebrew/opt/openjdk@$i/bin:\$PATH\"" >> ~/.zshrc
    sudo ln -sfn "/opt/homebrew/opt/openjdk@$i/libexec/openjdk.jdk" "/Library/Java/JavaVirtualMachines/openjdk-$i.jdk"
    echo "alias j$i=\"export JAVA_HOME=\`/usr/libexec/java_home -v $i\`; java -version\"" >> ~/.zshrc
    echo "JDK $i installed and configured"
