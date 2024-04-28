@@ -43,6 +43,8 @@ declare -a casks=(
     "logi-options-plus"
     "xcodes"
     "menumeters"
+    "font-jetbrains-mono"
+    "font-input"
 )
 
 declare -a packages=(
@@ -65,6 +67,8 @@ declare -a appStoreApps=(
     "ColorSlurp"
     "CopyLess 2 - Clipboard Manager"
 )
+
+brew tap homebrew/cask-fonts
 
 for i in "${casks[@]}"
 do
